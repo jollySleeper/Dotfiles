@@ -46,10 +46,36 @@ local nvimtree = {
         lualine_a = {
             { get_short_cwd,
                 fmt = function(str)
-                    if str == "~" then
-                       return ""
+                    local paths = {}
+                    local fullPath = ""
+                    local sizeOfPath = 0
+
+                    for path in string.gmatch(str, "[^/]+") do
+                        if path == "~" then
+                            path = " "
+                        end
+                        table.insert(paths, path)
+                        sizeOfPath = sizeOfPath + 1
                     end
-                    return str:gsub("~/", " ")
+
+                    -- table.sort(paths)
+                    for index, path in pairs(paths) do
+                        if index == 1 and sizeOfPath > 1 then
+                            fullPath = fullPath .. path .. " "
+                        elseif sizeOfPath > 3 and index > 1 and index <= sizeOfPath - 2 then
+                            -- if string.len(path) > 4 then
+                            --     path = path:sub(1, 1) .. "*"
+                            --         .. path:sub(string.len(path), string.len(path))
+                            -- end
+                            fullPath = fullPath .. path:sub(1, 1) .. "*/"
+                        elseif index == sizeOfPath then
+                            fullPath = fullPath .. path
+                        else
+                            fullPath = fullPath .. path .. "/"
+                        end
+                    end
+
+                    return fullPath
                 end
             }
         },
