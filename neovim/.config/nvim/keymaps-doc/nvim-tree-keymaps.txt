@@ -1,0 +1,207 @@
+[1]:
+	[key]:
+		[1] = <CR>
+		[2] = o
+		[3] = <2-LeftMouse>
+	[desc] = open a file or folder; root will cd to the above directory
+	[action] = edit
+[2]:
+	[key] = <C-e>
+	[desc] = edit the file in place, effectively replacing the tree explorer
+	[action] = edit_in_place
+[3]:
+	[key] = O
+	[desc] = same as (edit) with no window picker
+	[action] = edit_no_picker
+[4]:
+	[key]:
+		[1] = <C-]>
+		[2] = <2-RightMouse>
+	[desc] = cd in the directory under the cursor
+	[action] = cd
+[5]:
+	[key] = <C-v>
+	[desc] = open the file in a vertical split
+	[action] = vsplit
+[6]:
+	[key] = <C-x>
+	[desc] = open the file in a horizontal split
+	[action] = split
+[7]:
+	[key] = <C-t>
+	[desc] = open the file in a new tab
+	[action] = tabnew
+[8]:
+	[key] = <
+	[desc] = navigate to the previous sibling of current file/directory
+	[action] = prev_sibling
+[9]:
+	[key] = >
+	[desc] = navigate to the next sibling of current file/directory
+	[action] = next_sibling
+[10]:
+	[key] = P
+	[desc] = move cursor to the parent directory
+	[action] = parent_node
+[11]:
+	[key] = <BS>
+	[desc] = close current opened directory or parent
+	[action] = close_node
+[12]:
+	[key] = <Tab>
+	[desc] = open the file as a preview (keeps the cursor in the tree)
+	[action] = preview
+[13]:
+	[key] = K
+	[desc] = navigate to the first sibling of current file/directory
+	[action] = first_sibling
+[14]:
+	[key] = J
+	[desc] = navigate to the last sibling of current file/directory
+	[action] = last_sibling
+[15]:
+	[key] = C
+	[desc] = toggle visibility of git clean via |filters.git_clean| option
+	[action] = toggle_git_clean
+[16]:
+	[key] = I
+	[desc] = toggle visibility of files/folders hidden via |git.ignore| option
+	[action] = toggle_git_ignored
+[17]:
+	[key] = H
+	[desc] = toggle visibility of dotfiles via |filters.dotfiles| option
+	[action] = toggle_dotfiles
+[18]:
+	[key] = B
+	[desc] = toggle visibility of files/folders hidden via |filters.no_buffer| option
+	[action] = toggle_no_buffer
+[19]:
+	[key] = U
+	[desc] = toggle visibility of files/folders hidden via |filters.custom| option
+	[action] = toggle_custom
+[20]:
+	[key] = R
+	[desc] = refresh the tree
+	[action] = refresh
+[21]:
+	[key] = a
+	[desc] = add a file; leaving a trailing `/` will add a directory
+	[action] = create
+[22]:
+	[key] = d
+	[desc] = delete a file (will prompt for confirmation)
+	[action] = remove
+[23]:
+	[key] = D
+	[desc] = trash a file via |trash| option
+	[action] = trash
+[24]:
+	[key] = r
+	[desc] = rename a file
+	[action] = rename
+[25]:
+	[key] = <C-r>
+	[desc] = rename a file and omit the filename on input
+	[action] = full_rename
+[26]:
+	[key] = e
+	[desc] = rename a file with filename-modifiers ':t:r' without changing extension
+	[action] = rename_basename
+[27]:
+	[key] = x
+	[desc] = add/remove file/directory to cut clipboard
+	[action] = cut
+[28]:
+	[key] = c
+	[desc] = add/remove file/directory to copy clipboard
+	[action] = copy
+[29]:
+	[key] = p
+	[desc] = paste from clipboard; cut clipboard has precedence over copy; will prompt for confirmation
+	[action] = paste
+[30]:
+	[key] = y
+	[desc] = copy name to system clipboard
+	[action] = copy_name
+[31]:
+	[key] = Y
+	[desc] = copy relative path to system clipboard
+	[action] = copy_path
+[32]:
+	[key] = gy
+	[desc] = copy absolute path to system clipboard
+	[action] = copy_absolute_path
+[33]:
+	[key] = [e
+	[desc] = go to next diagnostic item
+	[action] = prev_diag_item
+[34]:
+	[key] = [c
+	[desc] = go to next git item
+	[action] = prev_git_item
+[35]:
+	[key] = ]e
+	[desc] = go to prev diagnostic item
+	[action] = next_diag_item
+[36]:
+	[key] = ]c
+	[desc] = go to prev git item
+	[action] = next_git_item
+[37]:
+	[key] = -
+	[desc] = navigate up to the parent directory of the current file/directory
+	[action] = dir_up
+[38]:
+	[key] = s
+	[desc] = open a file with default system application or a folder with default file manager, using |system_open| option
+	[action] = system_open
+[39]:
+	[key] = f
+	[desc] = live filter nodes dynamically based on regex matching.
+	[action] = live_filter
+[40]:
+	[key] = F
+	[desc] = clear live filter
+	[action] = clear_live_filter
+[41]:
+	[key] = q
+	[desc] = close tree window
+	[action] = close
+[42]:
+	[key] = W
+	[desc] = collapse the whole tree
+	[action] = collapse_all
+[43]:
+	[key] = E
+	[desc] = expand the whole tree, stopping after expanding |actions.expand_all.max_folder_discovery| folders; this might hang neovim for a while if running on a big folder
+	[action] = expand_all
+[44]:
+	[key] = S
+	[desc] = prompt the user to enter a path and then expands the tree to match the path
+	[action] = search_node
+[45]:
+	[key] = .
+	[desc] = enter vim command mode with the file the cursor is on
+	[action] = run_file_command
+[46]:
+	[key] = <C-k>
+	[desc] = toggle a popup with file infos about the file under the cursor
+	[action] = toggle_file_info
+[47]:
+	[key] = g?
+	[desc] = toggle help
+	[action] = toggle_help
+[48]:
+	[key] = m
+	[desc] = Toggle node in bookmarks
+	[action] = toggle_mark
+[49]:
+	[key] = bmv
+	[desc] = Move all bookmarked nodes into specified location
+	[action] = bulk_move
+[50]:
+	[key] = u
+	[action] = dir_up
+[51]:
+	[key] = v
+	[action] = vsplit
