@@ -1,0 +1,37 @@
+# Light Theme Colors
+# Got Theme from 'alacritty-themes' Node Package
+  
+# Decorations theme variant (Linux/BSD only)
+# Override the variant of the GTK theme/Wayland client side decorations.
+window:
+  decorations_theme_variant: light
+
+theme: Atelierforest.light
+
+colors:
+  name: Atelierforest (light)
+  author: Chris Kempson
+  primary:
+    background: "#f3f2f1"
+    foreground: "#545e5b"
+  cursor:
+    text: "#f3f2f1"
+    cursor: "#545e5b"
+  normal:
+    black: "#1b1918"
+    red: "#f22c40"
+    green: "#5ab738"
+    yellow: "#d5911a"
+    blue: "#407ee7"
+    magenta: "#6666ea"
+    cyan: "#00ad9c"
+    white: "#a8a19f"
+  bright:
+    black: "#766e6b"
+    red: "#f22c40"
+    green: "#5ab738"
+    yellow: "#d5911a"
+    blue: "#407ee7"
+    magenta: "#6666ea"
+    cyan: "#00ad9c"
+    white: "#f3f2f1"
