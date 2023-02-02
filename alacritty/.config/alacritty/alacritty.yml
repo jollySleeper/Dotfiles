@@ -5,8 +5,8 @@
 # file being loaded last. If a field is already present in a previous import, it
 # will be replaced.
 import:
-  - ~/.config/alacritty/colors.yml
-  - ~/.config/alacritty/fonts.yml
+  - ~/Dotfiles/alacritty/.config/alacritty/colors.yml
+  - ~/Dotfiles/alacritty/.config/alacritty/fonts.yml
 
 window:
   # Window padding (changes require restart)
