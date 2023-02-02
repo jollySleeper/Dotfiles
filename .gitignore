@@ -1,0 +1,2 @@
+# Ignoring Colors.yml file form Alacritty
+/alacritty/.config/alacritty/colors.yml
