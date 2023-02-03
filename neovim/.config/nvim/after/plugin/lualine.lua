@@ -51,28 +51,30 @@ local nvimtree = {
                     local sizeOfPath = 0
 
                     for path in string.gmatch(str, "[^/]+") do
-                        if path == "~" then
-                            path = " "
-                        end
                         table.insert(paths, path)
                         sizeOfPath = sizeOfPath + 1
                     end
 
                     -- table.sort(paths)
                     for index, path in pairs(paths) do
-                        if index == 1 and sizeOfPath > 1 then
-                            fullPath = fullPath .. path .. " "
-                        elseif sizeOfPath > 3 and index > 1 and index <= sizeOfPath - 2 then
-                            -- if string.len(path) > 4 then
-                            --     path = path:sub(1, 1) .. "*"
-                            --         .. path:sub(string.len(path), string.len(path))
-                            -- end
-                            fullPath = fullPath .. path:sub(1, 1) .. "*/"
+                        if path == "~" then
+                            path = " "
+                            if sizeOfPath > 1 then
+                                path = path .. " "
+                            end
+                        elseif sizeOfPath > 3 and index <= sizeOfPath - 2 then
+                            if string.len(path) > 2 then
+                                path = path:sub(1, 1) .. "*/"
+                            else
+                                path = path .. "/"
+                            end
                         elseif index == sizeOfPath then
-                            fullPath = fullPath .. path
+                            -- Do Nothing
                         else
-                            fullPath = fullPath .. path .. "/"
+                            path = path .. "/"
                         end
+
+                        fullPath = fullPath .. path
                     end
 
                     return fullPath
