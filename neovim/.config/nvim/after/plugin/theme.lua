@@ -18,11 +18,19 @@ local my_theme = "dark"; -- Fallback to Dark Theme
 -- Line 21 will be Written Using `sed` Command
 -- `sed -i "21s/dark/light/g" $HOME/.config/nvim/after/plugin/theme.lua`
 -- `sed -i "21s/dark/light/g" $HOME/.config/nvim/after/plugin/theme.lua`
-my_theme = "light"; -- Automated Line
+my_theme = "dark"; -- Automated Line
 
--- Using the theme variable written by script
+local bg_color = "#24292e" -- Dark Theme Color
+-- Setting Custom BG for Light Theme
+if my_theme == "light" then
+    bg_color = "#f3f2f1" -- Same as Alacritty
+end
+
 require("github-theme").setup({
     theme_style = my_theme,
+    colors = {
+        bg =  bg_color
+    }
 });
 
 
