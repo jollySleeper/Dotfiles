@@ -2,11 +2,15 @@
 -- Default Setup Copied from Readme of Repo
 
 -- Creating Custom Theme
-local colors = {
-    lightgray = '#8B939A',
-    skyblue = '#A1CAF1'
-}
 local custom_theme = require('lualine.themes.OceanicNext');
+local colors = {
+    lightgray = '#8b939a',
+    skyblue = '#a1caf1',
+    diffgreen = '#3ded97',
+    diffblue = '#0000ff',
+    diffred = '#d21f3c',
+    warnyellow = '#fada5e '
+}
 
 -- Changing Background of lualine_c section for Modes
 custom_theme.normal.c.bg = colors.lightgray
@@ -115,11 +119,26 @@ require('lualine').setup {
                     end
                     return str
                 end
-            },
-            'diff',
-            'diagnostics'
+            }
         },
-        lualine_c = { 'filename' },
+
+        lualine_c = {
+            { 'diff',
+                -- Overridding Default Diff Color
+                diff_color = {
+                    added = { fg = colors.diffgreen },
+                    modified = { fg = colors.diffblue },
+                    removed = { fg = colors.diffred }
+                }
+            },
+            { 'diagnostics',
+                -- Overridding Default Diff Color
+                diagnostics_color = {
+                    warn = { fg = colors.warnyellow }
+                }
+            },
+            'filename'
+        },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
