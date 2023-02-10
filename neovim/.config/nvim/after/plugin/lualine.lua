@@ -121,7 +121,6 @@ require('lualine').setup {
                 end
             }
         },
-
         lualine_c = {
             { 'diff',
                 -- Overridding Default Diff Color
