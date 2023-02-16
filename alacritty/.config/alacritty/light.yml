@@ -4,7 +4,7 @@
 # Decorations theme variant (Linux/BSD only)
 # Override the variant of the GTK theme/Wayland client side decorations.
 window:
-  decorations_theme_variant: light
+  decorations_theme_variant: Light
 
 theme: Atelierforest.light
 

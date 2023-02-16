@@ -4,7 +4,7 @@
 # Decorations theme variant (Linux/BSD only)
 # Override the variant of the GTK theme/Wayland client side decorations.
 window:
-  decorations_theme_variant: dark
+  decorations_theme_variant: Dark
 
 theme: vscode.dark
 
