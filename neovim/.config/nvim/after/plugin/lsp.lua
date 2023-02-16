@@ -36,7 +36,7 @@ local custom_conf = {
         }
     },
     -- Configuring Lua Server
-    ["sumneko_lua"] = {
+    ["lua_ls"] = {
         -- Fix Undefined global 'vim' in Lua Files
         on_attach = function(client, bufnr)
             print('Hello Lua Language Server');
