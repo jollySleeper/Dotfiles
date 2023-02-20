@@ -3,7 +3,6 @@ alias exa='exa --icons'
 alias exal='exa -lag'
 alias exat='exa -T'
 
-
 #Tmux
 alias tmux='tmux -u -f $HOME/.config/tmux/tmux.conf'
 alias tmux-as='tmux attach-session -t'
