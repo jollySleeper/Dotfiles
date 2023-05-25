@@ -53,16 +53,39 @@ local custom_conf = {
                 }
             }
         }
+    },
+    ["rust_analyzer"] = {
+        on_attach = function(client, bufnr)
+            print('Hello Rust');
+        end,
+    },
+    ["rome"] = {
+        on_attach = function(client, bufnr)
+            print('Hello Rome');
+        end,
+        settings = {
+            rome = {
+                lspBin = "~/.local/share/nvim/mason/packages/rome/node_modules/rome/bin/rome"
+            }
+        }
     }
 };
 
+
 local function lsp_configure(list)
-  for server_name, opts in pairs(list) do
-    lsp.configure(server_name, opts);
-  end
+    for server_name, opts in pairs(list) do
+        lsp.configure(server_name, opts);
+    end
 end
 
-lsp_configure(custom_conf)
+lsp_configure(custom_conf);
+
+lsp.format_on_save({
+    servers = {
+        ['lua_ls'] = { 'lua' },
+        ['rust_analyzer'] = { 'rust' },
+    }
+})
 
 lsp.setup();
 

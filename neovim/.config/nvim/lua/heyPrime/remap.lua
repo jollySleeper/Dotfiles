@@ -47,7 +47,8 @@ keymap.set("n", "<leader>Y", [["+Y]])
 keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Format Code
-keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat [C]ode" });
+keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat[C]ode" });
+keymap.set("n", "<leader>fcr", "<cmd>:%!rome format --stdin-file-path %<CR>", { desc = "[F]ormat[C]odeWith[R]ome" });
 
 -- For Killing Buffer You are On Currently
 keymap.set("n", "<leader>x", "<cmd>:bd<CR>");
@@ -63,12 +64,12 @@ keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Binding for Opening New Project in New Tmux Window
 keymap.set(
-"n",
-"<leader>op",
-"<cmd>silent !tmux neww \"" ..
-"vim '$(fdfind --type d --type l --hidden --search-path $HOME --color=never . | fzf-tmux)'" ..
-"\"<CR>",
-{ desc = "[O]pen [P]roject" }
+    "n",
+    "<leader>op",
+    "<cmd>silent !tmux neww \"" ..
+    "nvim '$(fd --type d --type l --hidden --search-path $HOME --color=never . | fzf-tmux)'" ..
+    "\"<CR>",
+    { desc = "[O]pen [P]roject" }
 )
 
 -- Instant Replace the Word You are On by ThePrimeagen
@@ -160,7 +161,7 @@ keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind [H]elp' });
 keymap.set(
     "n",
     "<leader>theme",
-    "<cmd>:so /home/ronak/.config/nvim/after/plugin/theme.lua<CR>",
+    "<cmd>:so $HOME/.config/nvim/after/plugin/theme.lua<CR>",
     { desc = "[THEME], Source Theme File" }
 );
 
@@ -169,6 +170,9 @@ keymap.set(
 keymap.set("n", "<leader>ut", cmd.UndotreeToggle, { desc = "[U]ndo[T]ree" });
 
 
+-- Remap For Cargo
+keymap.set("n", "<leader>rb", "<cmd>!cargo build<CR>", { desc = "[R]ust[B]uild" });
+keymap.set("n", "<leader>rr", "<cmd>!cargo run<CR>", { desc = "[R]ust[R]un" });
 
 
 

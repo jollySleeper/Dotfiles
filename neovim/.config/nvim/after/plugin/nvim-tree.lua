@@ -1,12 +1,7 @@
 require("nvim-tree").setup({
     view = {
         adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "u", action = "dir_up" },
-                { key = "v", action = "vsplit" },
-            },
-        },
+        on_attach = on_attach,
     },
 });
 
@@ -14,8 +9,8 @@ require("nvim-tree").setup({
 -- vim.pretty_print(require('nvim-tree.api').config.mappings.active());
 
 local function open_nvim_tree()
-  -- open the tree
-  require("nvim-tree.api").tree.toggle({ focus = false });
+    -- open the tree
+    require("nvim-tree.api").tree.toggle({ focus = false });
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
