@@ -1,0 +1,13 @@
+# Ubuntu StatusBar
+set -g status-position bottom
+set -g status-justify left
+set -g status-style 'bg=colour208 fg=colour242'
+set -g status-left '#[fg=colour215,bg=colour242]  #[fg=colour242,bg=colour208]#[bg=colour208,fg=colour242] '
+set -g status-right '#[fg=colour242,bg=colour208]#[fg=colour255,bg=colour242] 󰸗 %d/%m #[fg=colour239,bg=colour242]#[fg=colour255,bg=colour239] 󰀠 %H:%M '
+set-window-option -g window-status-separator ''
+
+setw -g window-status-current-style 'fg=colour242 bg=colour215 bold'
+setw -g window-status-current-format '#[fg=colour208,bg=colour215] #[fg=colour242]#I:#W#F #[fg=colour215,bg=colour208]'
+setw -g window-status-style 'fg=colour255 bg=colour208'
+setw -g window-status-format ' #I:#W#[fg=colour255]#F '
+
