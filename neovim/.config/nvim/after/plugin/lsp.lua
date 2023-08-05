@@ -63,11 +63,6 @@ local custom_conf = {
         on_attach = function(client, bufnr)
             print('Hello Rome');
         end,
-        settings = {
-            rome = {
-                lspBin = "~/.local/share/nvim/mason/packages/rome/node_modules/rome/bin/rome"
-            }
-        }
     }
 };
 
