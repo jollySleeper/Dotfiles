@@ -19,6 +19,3 @@ export FZF_ALT_C_OPTS="--preview 'exa -aT | head -50'"
 
 # For Zoxide
 export _ZO_FZF_OPTS="--height=40% --reverse"
-
-# For fnm
-export PATH="$HOME/.local/share/fnm:$PATH"
