@@ -1,0 +1,22 @@
+[Default Applications]
+
+application/pdf=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+application/rdf+xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+application/rss+xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+application/xhtml+xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+application/xhtml_xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+application/xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+
+image/jpeg=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+image/png=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+image/gif=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+image/webp=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+
+text/html=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+text/xml=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+x-scheme-handler/http=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+x-scheme-handler/https=librewolf-private.desktop;ungoogled-chromium-private.desktop;
+
+x-scheme-handler/logseq=logseq.desktop;
+x-scheme-handler/tg=org.telegram.desktop._691ba370690e367d5651a8edfe6e5538.desktop;
+
