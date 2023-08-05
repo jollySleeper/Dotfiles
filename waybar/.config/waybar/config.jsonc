@@ -1,0 +1,184 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "clock",
+        //"custom/weather", //rewrite in Lua
+        "cpu",
+        "memory",
+        "wlr/workspaces"
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+        "tray",
+        "network",
+        "bluetooth",
+        "custom/language",
+        "backlight",
+        "pulseaudio#microphone",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            "LibreWolf": "  LibreWolf",
+            "(.*) — LibreWolf": "  $1",
+            "(.*) — LibreWolf Private Browsing": "  $1",
+            "Telegram": "  Telegram",
+            "Alacritty": "󱓞  Alacritty",
+        },
+        "max-length": 80,
+        "icon": true
+    },
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+   "custom/weather" : {
+        "tooltip" : true,
+        "format" : "{}",
+        "interval" : 30,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10,
+        "on-click": "alacritty -e btm --mem_as_value" //Make .config for Bottom
+    },
+    "memory": {
+        "interval": 30,
+        "format": "󰍛 {}%",
+        "max-length": 10,
+        "tooltip-format": "󰍛 {avail:0.1f}GB Available\n{used:0.1f}GB/{total:0.1f}GB Used",
+        "on-click": "alacritty -e btm --mem_as_value"
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{: %R   %d/%m}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "light -U 1",
+        "on-scroll-down": "light -A 1",
+        "min-length": 6
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": true,
+        "format-muted": "󰖁",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -d 1",
+        "on-scroll-down": "pamixer -i 1",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -d 1",
+        "on-scroll-down": "pamixer --default-source -i 1",
+        "scroll-step": 5
+    },
+    "bluetooth": {
+        "format-disabled": "󰀝",
+        "format-on": "󰂯",
+        "on-click": "bluetoothctl power off",
+        "format-off": "󰂲",
+        "on-click-right": "bluetoothctl power on && bluetoothctl connect $(bluetoothctl devices | choose -f ' ' 1)",
+        "on-click-middle": "bluetoothctl power on",
+        "format-connected": "󰂱",
+        //Experimental
+        //"format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "format-connected-battery": "󰂱 {device_battery_percentage}%",
+        //Tooltip
+        "tooltip-format-on": "  {controller_alias}\t{controller_address}\n\n\t{num_connections} Device Connected ",
+        "tooltip-format-connected": "  {controller_alias}\t{controller_address}\n\n\t{num_connections} Device Connected \n\n{device_enumerate}",
+        "tooltip-format-off": "󰂲 BT Turned Off",
+        //Experimental
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "network": {
+        // TODO: Add Rofi WiFi Selector
+        "interface": "wlp1s0",
+        "format-wifi": "{icon} {bandwidthTotalBytes}",
+        "format-disconnected": "󰤯", //An empty format will hide the module.
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        //Tooltip
+        "tooltip-format": "󰈀 {ifname} via {gwaddr}",
+        "tooltip-format-wifi": "󰤨  {essid} ({signalStrength}%)\n\n  {bandwidthUpBytes}\t  {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "󰤮  WiFi Disconnected",
+        //Ethernet
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "󰈀 {ifname}",
+        "max-length": 50
+    },
+    "custom/power":{
+        "format": " ",
+        "on-click": "wlogout --protocol layer-shell -b 5 -T 400 -B 400",
+    },
+}
