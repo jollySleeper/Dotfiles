@@ -1,0 +1,284 @@
+{
+  "youtube": {
+    "enabled": true,
+    "redirectType": "both",
+    "frontend": "piped",
+    "unsupportedUrls": "block"
+  },
+  "invidious": [
+    "https://inv.vern.cc"
+  ],
+  "piped": [
+    "https://piped.video",
+    "https://piped.garudalinux.org",
+    "https://piped.mha.fi",
+    "https://piped.in.projectsegfau.lt"
+  ],
+  "pipedMaterial": [
+    "https://piped-material.xn--17b.net"
+  ],
+  "cloudtube": [
+    "https://tube.cadence.moe"
+  ],
+  "poketube": [
+    "https://poketube.fun"
+  ],
+  "youtubeMusic": {
+    "enabled": true,
+    "frontend": "hyperpipe",
+    "unsupportedUrls": "block"
+  },
+  "beatbump": [
+    "https://beatbump.ml"
+  ],
+  "hyperpipe": [
+    "https://hyperpipe.surge.sh",
+    "https://hyperpipe.esmailelbob.xyz"
+  ],
+  "twitter": {
+    "enabled": true,
+    "redirectType": "both",
+    "unsupportedUrls": "block"
+  },
+  "nitter": [
+    "https://nitter.net",
+    "https://nitter.kavin.rocks",
+    "https://singapore.unofficialbird.com",
+    "https://india.unofficialbird.com"
+  ],
+  "tiktok": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "proxiTok": [
+    "https://proxitok.pabloferreiro.es"
+  ],
+  "reddit": {
+    "enabled": true,
+    "frontend": "libreddit",
+    "unsupportedUrls": "bypass"
+  },
+  "libreddit": [
+    "https://libreddit.kavin.rocks",
+    "https://libreddit.privacy.com.de",
+    "https://reddit.baby",
+    "https://libreddit.pussthecat.org"
+  ],
+  "teddit": [
+    "https://teddit.net"
+  ],
+  "imgur": {
+    "enabled": true,
+    "redirectType": "both",
+    "unsupportedUrls": "bypass"
+  },
+  "rimgo": [
+    "https://rim.odyssey346.dev",
+    "https://imgur.artemislena.eu",
+    "https://rimgo.vern.cc"
+  ],
+  "medium": {
+    "frontend": "scribe",
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "scribe": [
+    "https://scribe.rip",
+    "https://scribe.nixnet.services"
+  ],
+  "libMedium": [
+    "https://libmedium.batsense.net"
+  ],
+  "quora": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "quetre": [
+    "https://quetre.privacydev.net"
+  ],
+  "imdb": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "libremdb": [
+    "https://libremdb.pussthecat.org"
+  ],
+  "fandom": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "breezeWiki": [
+    "https://breezewiki.pussthecat.org",
+    "https://antifandom.com"
+  ],
+  "lbry": {
+    "enabled": true,
+    "frontend": "librarian",
+    "redirectType": "both",
+    "unsupportedUrls": "bypass"
+  },
+  "librarian": [
+    "https://lbry.projectsegfau.lt",
+    "https://librarian.esmailelbob.xyz"
+  ],
+  "search": {
+    "enabled": true,
+    "frontend": "searxng",
+    "unsupportedUrls": "bypass"
+  },
+  "searxng": [
+    "https://s.frlt.one",
+    "https://search.in.projectsegfau.lt",
+    "https://opnxng.com"
+  ],
+  "searx": [],
+  "whoogle": [],
+  "librex": [],
+  "translate": {
+    "enabled": true,
+    "frontend": "simplyTranslate",
+    "unsupportedUrls": "bypass"
+  },
+  "simplyTranslate": [
+    "https://simplytranslate.esmailelbob.xyz",
+    "https://translate.riverside.rocks"
+  ],
+  "lingva": [
+    "https://lingva.ml"
+  ],
+  "libreTranslate": [],
+  "maps": {
+    "enabled": false,
+    "frontend": "osm",
+    "unsupportedUrls": "bypass"
+  },
+  "facil": [
+    " https://facilmap.org "
+  ],
+  "osm": [
+    "https://www.openstreetmap.org"
+  ],
+  "sendFiles": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "send": [
+    "https://send.vis.ee"
+  ],
+  "textStorage": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "privateBin": [],
+  "reuters": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "neuters": [
+    "https://neuters.de"
+  ],
+  "genius": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "dumb": [
+    "https://sing.whatever.social",
+    "https://dm.vern.cc"
+  ],
+  "urbanDictionary": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "ruralDictionary": [
+    "https://rd.vern.cc",
+    "https://ruraldictionary.esmailelbob.xyz"
+  ],
+  "stackOverflow": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "anonymousOverflow": [
+    "https://code.whatever.social",
+    "https://overflow.smnz.de",
+    "https://overflow.hostux.net",
+    "https://overflow.adminforge.de"
+  ],
+  "goodreads": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "biblioReads": [
+    "https://bl.vern.cc",
+    "https://biblioreads.eu.org"
+  ],
+  "wikipedia": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "wikiless": [
+    "https://wiki.froth.zone",
+    "https://wiki.adminforge.de"
+  ],
+  "snopes": {
+    "enabled": false,
+    "unsupportedUrls": "bypass"
+  },
+  "suds": [
+    "https://sd.vern.cc"
+  ],
+  "exceptions": {
+    "url": [],
+    "regex": []
+  },
+  "theme": "light",
+  "popupServices": [
+    "tiktok",
+    "reddit",
+    "quora",
+    "maps",
+    "stackOverflow",
+    "youtube",
+    "youtubeMusic",
+    "twitter",
+    "translate",
+    "search"
+  ],
+  "fetchInstances": "github",
+  "waybackMachine": {
+    "enabled": false,
+    "unsupportedUrls": "bypass"
+  },
+  "waybackClassic": [
+    "https://wayback-classic.net"
+  ],
+  "github": {
+    "enabled": false,
+    "unsupportedUrls": "bypass"
+  },
+  "gothub": [
+    "https://gh.odyssey346.dev"
+  ],
+  "bilibili": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "mikuInvidious": [
+    "https://mikuinv.resrv.org"
+  ],
+  "bandcamp": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "tent": [
+    "https://tent.sny.sh"
+  ],
+  "wolframAlpha": {
+    "enabled": true,
+    "unsupportedUrls": "bypass"
+  },
+  "wolfreeAlpha": [
+    "https://gqq.gitlab.io",
+    "https://uqq.gitlab.io"
+  ],
+  "version": "2.5.4"
+}
