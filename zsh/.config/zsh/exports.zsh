@@ -6,8 +6,13 @@ SAVEHIST=1000000
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
-export PATH="$HOME/.local/bin":$PATH
 #export LC_ALL=en_US.UTF-8
+
+# Paths
+## Local Directory
+export PATH="$HOME/.local/bin":$PATH
+## Rust Builds
+export PATH="$HOME/.cargo/bin":$PATH
 
 # For Fzf
 export FZF_DEFAULT_COMMAND='fdfind --type f --type l --hidden --color=never'
