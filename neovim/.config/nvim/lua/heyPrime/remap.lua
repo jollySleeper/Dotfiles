@@ -46,6 +46,11 @@ keymap.set("n", "<leader>Y", [["+Y]])
 -- For Deleting & Copying to System Registers
 keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+-- For Quiting All Buffers with Saving
+keymap.set("n", "<leader>zz", "<cmd>:wqa<CR>");
+-- For Quiting All Buffers without Saving
+keymap.set("n", "<leader>zq", "<cmd>:qa!<CR>");
+
 -- Format Code
 keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat[C]ode" });
 keymap.set("n", "<leader>fcr", "<cmd>:%!rome format --stdin-file-path %<CR>", { desc = "[F]ormat[C]odeWith[R]ome" });
