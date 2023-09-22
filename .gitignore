@@ -3,6 +3,8 @@ alacritty/.config/alacritty/colors.yml
 
 # Ignoring Nvim Theme.lua file from Nvim
 neovim/.config/nvim/after/plugin/theme.lua
+# Ignoring Packer Compiled File from Nvim
+neovim/.config/nvim/plugin/packer_compiled.lua
 
 # Ignoring Zsh History
 zsh/.config/zsh/zsh_history
