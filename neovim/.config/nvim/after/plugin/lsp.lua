@@ -17,6 +17,9 @@ local custom_conf = {
                     -- documentRoot = {},
                     phpVersion = "7.2.34"
                 },
+                format = {
+                    braces = "k&r"
+                },
                 -- Writing Whole Stubs as configure() function Overrides default values :(
                 -- Need to Add Stub for Flawless Integration of Intelephense in Plugin Folder
                 stubs = {
@@ -30,7 +33,7 @@ local custom_conf = {
                     "sysvmsg", "sysvsem", "sysvshm", "tidy", "tokenizer", "xml", "xmlreader",
                     "xmlrpc", "xmlwriter", "xsl", "Zend OPcache", "zip", "zlib",
                     -- Custom Stub
-                    "/var/www/html/test/ap.infogalore.net/", -- For ArbPlugin
+                    "/var/www/html/ps/Sites/frostmag.com/", -- For ArbPlugin
                 }
             }
         }
@@ -59,9 +62,14 @@ local custom_conf = {
             print('Hello Rust');
         end,
     },
-    ["rome"] = {
+    ["biome"] = {
         on_attach = function(client, bufnr)
-            print('Hello Rome');
+            print('Hello Biome');
+        end,
+    },
+    ["clangd"] = {
+        on_attach = function(client, bufnr)
+            print('Hello ClangD');
         end,
     }
 };
