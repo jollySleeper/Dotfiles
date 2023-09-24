@@ -1,0 +1,12 @@
+# Raspberry Pi OS StatusBar
+set -g status-position bottom
+set -g status-justify left
+set -g status-style 'bg=colour125 fg=colour242'
+set -g status-left '#[fg=colour198,bg=colour239]  #[fg=colour239,bg=colour125]#[bg=colour125,fg=colour239] '
+set -g status-right '#[fg=colour242,bg=colour125]#[fg=colour255,bg=colour242] 󰸗 %d/%m #[fg=colour239,bg=colour242]#[fg=colour255,bg=colour239] 󰀠 %H:%M '
+set-window-option -g window-status-separator ''
+
+setw -g window-status-current-style 'fg=colour242 bg=colour198 bold'
+setw -g window-status-current-format '#[fg=colour125,bg=colour198] #[fg=colour255]#I:#W#F #[fg=colour198,bg=colour125]'
+setw -g window-status-style 'fg=colour250 bg=colour125'
+setw -g window-status-format ' #I:#W#[fg=colour250]#F '
