@@ -1,6 +1,9 @@
 #Clear
 alias clr='clear && please'
 
+#Wget
+alias wget="wget --hsts-file=$HOME/.config/wget/wget-history"
+
 #Exa
 alias exa='exa --icons'
 alias exal='exa -lag'
