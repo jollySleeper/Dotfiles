@@ -1,8 +1,15 @@
 # For Zap Zsh Plugin Manager
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
-# History
+# History Related Settings
 HISTFILE=$HOME/.config/zsh/zsh_history
+# The meaning of these options can be found in man page of `zshoptions`.
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_ignore_all_dups   # ignore duplicated commands history list
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data inc_append_history
 
 # Importing/Sourcing Files
 plug "$HOME/.config/zsh/aliases.zsh"
