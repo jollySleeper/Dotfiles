@@ -24,3 +24,6 @@ export FZF_ALT_C_OPTS="--preview 'exa -aT | head -50'"
 
 # For Zoxide
 export _ZO_FZF_OPTS="--height=40% --reverse"
+
+# For Less: Avoding it from saving History at ~
+export LESSHISTFILE="$HOME/.config/less/less-history"
