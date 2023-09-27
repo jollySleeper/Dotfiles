@@ -1,3 +1,6 @@
+# TODO: Refactor this file and make common functions
+
+BAT_CONFIG_FILE="$HOME/Dotfiles/bat/.config/bat/config"
 ALACRITTY_PATH="$HOME/Dotfiles/alacritty/.config/alacritty/"
 NVIM_THEME_FILE="$HOME/Dotfiles/neovim/.config/nvim/after/plugin/theme.lua"
 LIBRE_OFFICE_CONFIG_FILE="$HOME/.config/libreoffice/4/user/registrymodifications.xcu"
@@ -17,9 +20,15 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 # LibreOffice
-for line in $(rg "CurrentColorScheme" $LIBRE_OFFICE_CONFIG_FILE -n -m 2| choose -f ":" 0)
+for line in $(rg "CurrentColorScheme" $LIBRE_OFFICE_CONFIG_FILE -n -m 2 | choose -f ":" 0)
 do 
     sed -i "${line}s/>LibreOffice Dark</>LibreOffice</g" $LIBRE_OFFICE_CONFIG_FILE
+done
+
+# Bat
+for line in $(rg "theme=" $BAT_CONFIG_FILE -n -m 1 | choose -f ":" 0)
+do 
+    sed -i "${line}s/1337/GitHub/g" $BAT_CONFIG_FILE
 done
 
 # Ungoogled Chromium
