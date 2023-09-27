@@ -3,9 +3,12 @@
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# TODO: Add checks for Commands used in Exports
+
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
+export PAGER="bat"
 #export LC_ALL=en_US.UTF-8
 
 # Paths
