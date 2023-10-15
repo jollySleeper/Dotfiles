@@ -8,3 +8,6 @@ neovim/.config/nvim/plugin/packer_compiled.lua
 
 # Ignoring Zsh History
 zsh/.config/zsh/zsh_history
+
+# Ignoring Tmux History
+tmux/.config/tmux/tmux_history
