@@ -39,6 +39,9 @@ if [[ $(awk -F= '/^ID=/ {print $2}' /etc/os-release 2> /dev/null | sed 's/"//g')
     #FdFind 
     alias fd='fdfind'
 
+    #Bat
+    alias bat='batcat'
+
     #OpenVPN3 for Work
     alias list-vpn='openvpn3 sessions-list'
     alias start-vpn='openvpn3 session-start --config $HOME/Vpn/mnet_techvpn.ovpn'
