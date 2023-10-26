@@ -19,18 +19,19 @@ plug "$HOME/.config/zsh/exports.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/vim"
-        #plug "zap-zsh/zap-prompt"
-        #plug "zap-zsh/my-prompt"
 plug "jollySleeper/zapped-distro-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/sudo"
-	# For Skim in Zsh
-	# Decided to remove after installing
-	# As Fzf is faster and consumes less RAM
-	    #plug "zap-zsh/my-skim-plugin"
-	# For my Custom Fzf in Zsh
-        #plug "zap-zsh/my-fzf"
-        #plug "zap-zsh/fzf-key-binds"
+# TODO: Fork this Plugin for Modifications
+plug "zap-zsh/exa"
+## For Skim in Zsh
+## Decided to remove after installing
+## As Fzf is faster and consumes less RAM
+    #plug "zap-zsh/my-skim-plugin"
+## For my Custom Fzf in Zsh 
+## TODO: Upload these Repos
+    #plug "zap-zsh/my-fzf"
+    #plug "zap-zsh/fzf-key-binds"
 
 # Keybindings
 bindkey "^ " autosuggest-accept

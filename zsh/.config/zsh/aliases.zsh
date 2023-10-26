@@ -4,11 +4,6 @@ alias clr='clear && please'
 #Wget
 alias wget="wget --hsts-file=$HOME/.config/wget/wget-history"
 
-#Exa
-alias exa='exa --icons'
-alias exal='exa -lag'
-alias exat='exa -T'
-
 #Tmux
 alias tmux='tmux -u -f $HOME/.config/tmux/tmux.conf'
 alias tmux-as='tmux attach-session -t'
@@ -23,11 +18,11 @@ alias manf='man -k . | awk "{print $1}" | fzf --preview "man {1}" --preview-wind
 #Bluetooth
 alias bt-on='bluetoothctl power on'
 alias bt-off='bluetoothctl power off'
-alias bt-sd='bluetoothctl scan on'                  # [S]can[D]evice
-alias bt-ld='bluetoothctl devices'                  # [L]ist[D]evice
-alias bt-md='macOfDevice'       # [M]acOf[D]evice
-alias bt-cd='bluetoothctl connect'                  # [C]onnect[D]evice
-alias bt-dd='bluetoothctl disconnect'               # [D]isconnect[D]evice
+alias bt-sd='bluetoothctl scan on'      # [S]can[D]evice
+alias bt-ld='bluetoothctl devices'      # [L]ist[D]evice
+alias bt-md='macOfDevice'               # [M]acOf[D]evice
+alias bt-cd='bluetoothctl connect'      # [C]onnect[D]evice
+alias bt-dd='bluetoothctl disconnect'   # [D]isconnect[D]evice
 
 macOfDevice () {
     MAC=$(bt-ld | rg -i $*)
