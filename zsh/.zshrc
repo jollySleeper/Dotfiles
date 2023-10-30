@@ -16,14 +16,13 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 
 # Plugins
-plug "zsh-users/zsh-autosuggestions"
-plug "hlissner/zsh-autopair"
-plug "zap-zsh/vim"
 plug "jollySleeper/zapped-distro-prompt"
+plug "zap-zsh/vim"
+plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "hlissner/zsh-autopair"
 plug "zap-zsh/sudo"
-# TODO: Fork this Plugin for Modifications
-plug "zap-zsh/exa"
+plug "jollySleeper/zap-eza"
 ## For Skim in Zsh
 ## Decided to remove after installing
 ## As Fzf is faster and consumes less RAM
