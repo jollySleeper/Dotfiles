@@ -11,7 +11,10 @@ alias tmux-rs='tmux rename-session -t'
 
 #Fzf & it's derivatives
 alias fzft='fzf-tmux -r 30%'
-alias gco='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer=">" | xargs git checkout'
+alias gco='git branch --sort=-committerdate \
+    | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer=">" \
+    | choose -f " " -1 \
+    | xargs git checkout'
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 alias manf='man -k . | awk "{print $1}" | fzf --preview "man {1}" --preview-window=right,70% | xargs man'
 
