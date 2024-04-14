@@ -1,5 +1,5 @@
 # Ignoring Colors.yml file form Alacritty
-alacritty/.config/alacritty/colors.yml
+alacritty/.config/alacritty/colors.toml
 
 # Ignoring Nvim Theme.lua file from Nvim
 neovim/.config/nvim/after/plugin/theme.lua
