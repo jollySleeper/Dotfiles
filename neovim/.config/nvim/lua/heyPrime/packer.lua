@@ -45,9 +45,7 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' },
 
             -- Useful status updates for LSP
-            { 'j-hui/fidget.nvim',
-                tag = 'legacy'
-            },
+            { 'j-hui/fidget.nvim' },
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
@@ -89,5 +87,4 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     });
-
 end);
