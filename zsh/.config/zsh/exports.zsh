@@ -8,7 +8,11 @@ SAVEHIST=1000000
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
-export PAGER="bat"
+if type batcat > /dev/null; then
+    export PAGER="batcat"
+else
+    export PAGER="bat"
+fi
 #export LC_ALL=en_US.UTF-8
 
 # Paths
