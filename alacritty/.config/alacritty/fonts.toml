@@ -1,0 +1,27 @@
+[font]
+builtin_box_drawing = true
+size = 16
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Oblique"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "monospace"
+style = "Oblique"
+
+[font.normal]
+family = "monospace"
+style = "Book"
+
+[font.offset]
+x = 0
+y = 0

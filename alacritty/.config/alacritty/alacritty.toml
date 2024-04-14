@@ -1,0 +1,22 @@
+import = [
+    "/home/legion/Dotfiles/alacritty/.config/alacritty/colors.toml",
+    "/home/legion/Dotfiles/alacritty/.config/alacritty/fonts.toml"
+]
+
+[env]
+TERM = "alacritty"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+decorations = "none"
+dynamic_padding = true
+dynamic_title = true
+opacity = 1.0
+startup_mode = "Maximized"
+
+[window.padding]
+x = 6
+y = 12

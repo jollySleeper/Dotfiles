@@ -25,7 +25,7 @@ font:
     style: Bold Oblique
   
   # Point size
-  size: 18 
+  size: 16
   
   # Offset is the extra space around each character. `offset.y`
   # can be thought of as modifying the line spacing, and
