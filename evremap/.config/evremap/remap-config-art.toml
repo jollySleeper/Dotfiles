@@ -17,6 +17,12 @@ input = "KEY_CAPSLOCK"
 hold = ["KEY_LEFTCTRL"]
 tap = ["KEY_ESC"]
 
+# Making SemiColon as RIGHTCTRL
+[[dual_role]]
+input = "KEY_SEMICOLON"
+hold = ["KEY_RIGHTCTRL"]
+tap = ["KEY_SEMICOLON"]
+
 # My SpaceBar Config
 [[dual_role]]
 input = "KEY_SPACE"
