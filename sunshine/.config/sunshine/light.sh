@@ -9,8 +9,8 @@ SYS_DESKTOP_FILE_PATH="$HOME/.local/share/applications/"
 
 # Alacritty
 cd "$ALACRITTY_PATH"
-rm colors.yml
-ln -s light.yml colors.yml
+rm colors.toml
+ln -s light.toml colors.toml
 
 # Nvim
 sed -i "21s/dark/light/g" $NVIM_THEME_FILE
