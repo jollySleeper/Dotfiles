@@ -74,6 +74,7 @@ return require('packer').startup(function(use)
     -- Tree Directory Viewer
     use({
         'nvim-tree/nvim-tree.lua',
+        tag = 'v1.3',
         requires = { 'nvim-tree/nvim-web-devicons' }
     });
 
