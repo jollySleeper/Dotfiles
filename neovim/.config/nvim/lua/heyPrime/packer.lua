@@ -68,7 +68,7 @@ return require('packer').startup(function(use)
     -- Github Theme
     use({
         'projekt0n/github-nvim-theme',
-        tag = 'v0.0.7'
+        tag = 'v1.0.1'
     });
 
     -- Tree Directory Viewer
