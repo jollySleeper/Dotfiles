@@ -81,7 +81,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{: %R   %d/%m}",
+        "format": " {:%R   %d/%m}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
             "mode": "month",
