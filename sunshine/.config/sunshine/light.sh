@@ -31,13 +31,5 @@ do
     sed -i "${line}s/1337/GitHub/g" $BAT_CONFIG_FILE
 done
 
-# Ungoogled Chromium
-FILE="ungoogled-chromium"
-EXT=".desktop"
-rm "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
-rm "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
-ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-light${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
-ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-private-light${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
-
 # Debug Notification
 # notify-send "Ligth Mode by Light.sh"

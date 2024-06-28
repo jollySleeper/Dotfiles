@@ -32,12 +32,12 @@ do
 done
 
 # Ungoogled Chromium
-FILE="ungoogled-chromium"
-EXT=".desktop"
-rm "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
-rm "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
-ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-dark${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
-ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-private-dark${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
+# FILE="ungoogled-chromium"
+# EXT=".desktop"
+# rm "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
+# rm "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
+# ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-dark${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}${EXT}"
+# ln -s "${MY_DESKTOP_FILE_PATH}/${FILE}-private-dark${EXT}" "${SYS_DESKTOP_FILE_PATH}/${FILE}-private${EXT}"
 
 # Debug Notification
 # notify-send "Dark Mode by Dark.sh"
