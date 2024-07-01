@@ -16,6 +16,16 @@ Welcome to the foundation stone of HappyLand! This repository contains my person
 
 ## ✨ Features
 
+This repo features configurations for:
+- **alacritty**: A fast, GPU-accelerated terminal emulator that provides a smooth and responsive terminal experience.
+- **bat**: A modern replacement for `cat`, which provides syntax highlighting and Git integration for viewing files.
+- **hyprland**: A dynamic tiling Wayland compositor that offers a modern and efficient desktop experience, allowing for flexible window management and customization.
+- **neovim**: An extensible text editor that improves upon Vim, offering better plugin support and a more modern architecture.
+- **tmux**: A terminal multiplexer that allows you to manage multiple terminal sessions from a single window, making it easier to organize your workflow.
+- **waybar**: A highly customizable status bar for Wayland compositors, providing system information and notifications in a sleek interface.
+- **zsh**: A powerful shell that offers interactive features and scripting capabilities, enhancing your command-line experience.
+- Any many other apps.
+
 ## 🚀 Installation
 > You will need `git` and GNU `stow`
 
