@@ -21,6 +21,9 @@ export PATH="$HOME/.local/bin":$PATH
 ## Rust Builds
 export PATH="$HOME/.cargo/bin":$PATH
 
+# Go Path
+export GOPATH="$HOME/.go"
+
 # For Fzf
 export FZF_DEFAULT_COMMAND='fdfind --type f --type l --hidden --color=never'
 #export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
