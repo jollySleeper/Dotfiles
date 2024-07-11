@@ -45,7 +45,7 @@ if type "fnm" > /dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
-# Please-cli
-if type "please" > /dev/null; then
-    please
+# Quoterm
+if type "quoterm" > /dev/null; then
+    quoterm 
 fi

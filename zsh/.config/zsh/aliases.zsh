@@ -1,5 +1,5 @@
 #Clear
-alias clr='clear && please'
+alias clr='clear && quoterm'
 
 #Wget
 alias wget="wget --hsts-file=$HOME/.config/wget/wget-history"
