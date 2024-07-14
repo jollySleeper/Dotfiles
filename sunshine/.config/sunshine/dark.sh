@@ -28,7 +28,7 @@ done
 # Bat
 for line in $(rg "theme=" $BAT_CONFIG_FILE -n -m 1 | choose -f ":" 0)
 do 
-    sed -i "${line}s/GitHub/1337/g" $BAT_CONFIG_FILE
+    sed -i "${line}s/GitHub/Coldark-Dark/g" $BAT_CONFIG_FILE
 done
 
 # Ungoogled Chromium

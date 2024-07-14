@@ -28,7 +28,7 @@ done
 # Bat
 for line in $(rg "theme=" $BAT_CONFIG_FILE -n -m 1 | choose -f ":" 0)
 do 
-    sed -i "${line}s/1337/GitHub/g" $BAT_CONFIG_FILE
+    sed -i "${line}s/Coldark-Dark/GitHub/g" $BAT_CONFIG_FILE
 done
 
 # Debug Notification
