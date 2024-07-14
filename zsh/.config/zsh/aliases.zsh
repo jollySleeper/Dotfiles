@@ -32,6 +32,9 @@ macOfDevice () {
     echo ${MAC:7:17}
 }
 
+#Glow
+alias glowp="glow -p -w $((${COLUMNS} - 12))"
+
 #Only For Ubuntu
 if [[ $(awk -F= '/^ID=/ {print $2}' /etc/os-release 2> /dev/null | sed 's/"//g') == "ubuntu" ]]; then
     #FdFind 
