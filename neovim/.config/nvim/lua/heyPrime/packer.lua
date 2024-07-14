@@ -79,7 +79,10 @@ return require('packer').startup(function(use)
     });
 
     -- GitSigns
-    use('lewis6991/gitsigns.nvim');
+    use({
+        'lewis6991/gitsigns.nvim',
+        tag = 'v0.9.0',
+    });
 
     -- AutoPairs
     use('windwp/nvim-autopairs');
