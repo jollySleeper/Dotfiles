@@ -49,11 +49,4 @@ if [[ $(awk -F= '/^ID=/ {print $2}' /etc/os-release 2> /dev/null | sed 's/"//g')
 
     #Bat
     alias bat='batcat'
-
-    #OpenVPN3 for Work
-    alias list-vpn='openvpn3 sessions-list'
-    alias start-vpn='openvpn3 session-start --config $HOME/Work/Vpn/mnet_techvpn.ovpn'
-    alias start-vpn2='openvpn3 session-start --config $HOME/Work/Vpn/mnet_techvpn2.ovpn'
-    alias stop-vpn='openvpn3 session-manage --config $HOME/Work/Vpn/mnet_techvpn.ovpn --disconnect'
-    alias stop-vpn2='openvpn3 session-manage --config $HOME/Work/Vpn/mnet_techvpn2.ovpn --disconnect'
 fi
