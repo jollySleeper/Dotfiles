@@ -33,6 +33,7 @@ function macOfDevice () {
 
 # Fzf & it's derivatives
 alias fzft='fzf-tmux -r 30%'
+# TODO: Use functions for these
 alias gco='git branch --sort=-committerdate \
     | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer=">" \
     | choose -f " " -1 \
