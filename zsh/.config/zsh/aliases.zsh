@@ -35,8 +35,8 @@ function macOfDevice () {
 # TODO: Use functions for these
 alias fzft='fzf-tmux -r 30%'
 
-alias gco='gitCheckoutLocal'
-function gitCheckoutLocal () {
+alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut
+function gitCheckOutLocal () {
     local fzf_header="Checkout Recent Branch"
     local git_diff_command="git diff {1} --color=always"
 
