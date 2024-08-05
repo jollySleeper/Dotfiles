@@ -32,12 +32,20 @@ function macOfDevice () {
 
 
 # Fzf & it's derivatives
-alias fzft='fzf-tmux -r 30%'
 # TODO: Use functions for these
-alias gco='git branch --sort=-committerdate \
-    | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer=">" \
+alias fzft='fzf-tmux -r 30%'
+
+alias gco='gitCheckoutLocal'
+function gitCheckoutLocal () {
+    local fzf_header="Checkout Recent Branch"
+    local git_diff_command="git diff {1} --color=always"
+
+    git branch --sort=-committerdate \
+    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
     | choose -f " " -1 \
-    | xargs git checkout'
+    | xargs git checkout
+}
+
 alias gcoa='git branch -a --sort=-committerdate \
     | grep -v HEAD \
     | sed "s/remotes\///g" \
