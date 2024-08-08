@@ -39,7 +39,8 @@ alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut
 function gitCheckOutLocal () {
     local fzf_header="Checkout Recent Branch"
     local git_diff_command="git diff {1} --color=always"
-
+    
+    # TODO: Handle Choose/Cut whichever is Installed
     git branch --sort=-committerdate \
     | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
     | choose -f " " -1 \
