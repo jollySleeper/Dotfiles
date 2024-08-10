@@ -35,15 +35,22 @@ function macOfDevice () {
 # TODO: Use functions for these
 alias fzft='fzf-tmux -r 30%'
 
-alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut
+alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut Local Branches
 function gitCheckOutLocal () {
     local fzf_header="Checkout Recent Branch"
     local git_diff_command="git diff {1} --color=always"
+
+    function commandToGetLastWord() {
+        if type "choose1" > /dev/null; then
+           echo "choose -f ' ' -1"
+        else
+            echo "rev | cut -d ' ' -f 1 | rev"
+        fi
+    }
     
-    # TODO: Handle Choose/Cut whichever is Installed
     git branch --sort=-committerdate \
     | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
-    | choose -f " " -1 \
+    | eval "$(commandToGetLastWord)" \
     | xargs git checkout
 }
 
@@ -54,6 +61,7 @@ alias gcoa='git branch -a --sort=-committerdate \
     | choose -f " " -1 \
     | sed "s/origin\///g" \
     | xargs git checkout'
+
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 alias manf='man -k . | awk "{print $1}" | fzf --preview "man {1}" --preview-window=right,70% | xargs man'
 
