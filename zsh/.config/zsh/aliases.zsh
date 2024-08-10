@@ -32,9 +32,9 @@ function macOfDevice () {
 
 
 # Fzf & it's derivatives
-# TODO: Use functions for these
 alias fzft='fzf-tmux -r 30%'
 
+# TODO: Refactor this with gcoa
 alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut Local Branches
 function gitCheckOutLocal () {
     local fzf_header="Checkout Recent Branch"
