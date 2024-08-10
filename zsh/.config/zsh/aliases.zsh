@@ -54,6 +54,28 @@ function gitCheckOutLocal () {
     | xargs git checkout
 }
 
+alias gcoa='gitCheckOutAll'            # [G]it[C]heck[O]ut[A]ll Branches
+function gitCheckOutAll () {
+    local fzf_header="Checkout Recent Branch"
+    local git_diff_command="git diff {1} --color=always"
+
+    function commandToGetLastWord() {
+        if type "choose1" > /dev/null; then
+           echo "choose -f ' ' -1"
+        else
+            echo "rev | cut -d ' ' -f 1 | rev"
+        fi
+    }
+    
+    git branch --all --sort=-committerdate \
+    | grep -v HEAD \
+    | sed "s|remotes\/||g" \
+    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
+    | eval "$(commandToGetLastWord)" \
+    | sed "s|origin\/||g" \
+    | xargs git checkout
+}
+
 alias gcoa='git branch -a --sort=-committerdate \
     | grep -v HEAD \
     | sed "s/remotes\///g" \
