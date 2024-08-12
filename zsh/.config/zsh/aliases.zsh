@@ -39,6 +39,11 @@ alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-win
 alias gco='gitCheckOut --local-only'    # [G]it[C]heck[O]ut Local Branches
 alias gcoa='gitCheckOut'                # [G]it[C]heck[O]ut[A]ll Branches
 function gitCheckOut () {
+    local grep_filter="HEAD"
+    if [[ "$1" == "--local-only" ]]; then
+        grep_filter="remotes"
+    fi
+
     local fzf_header="Checkout Recent Branch"
     local git_diff_command="git diff {1} --color=always"
     
@@ -47,18 +52,13 @@ function gitCheckOut () {
         get_last_word_command="choose -f ' ' -1"
     fi
 
-    local grep_filter="HEAD"
-    if [[ "$1" == "--local-only" ]]; then
-        grep_filter="remotes"
-    fi
-
     git branch --all --sort=-committerdate \
-    | grep -v "$grep_filter" \
-    | sed "s|remotes/||g" \
-    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
-    | eval "$get_last_word_command" \
-    | sed "s|origin/||g" \
-    | xargs git checkout
+        | grep -v "$grep_filter" \
+        | sed "s|remotes/||g" \
+        | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
+        | eval "$get_last_word_command" \
+        | sed "s|origin/||g" \
+        | xargs git checkout
 }
 
 
