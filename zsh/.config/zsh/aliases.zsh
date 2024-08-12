@@ -33,51 +33,33 @@ function macOfDevice () {
 
 # Fzf & it's derivatives
 alias fzft='fzf-tmux -r 30%'
-
-# TODO: Refactor this with gcoa
-alias gco='gitCheckOutLocal'            # [G]it[C]heck[O]ut Local Branches
-function gitCheckOutLocal () {
-    local fzf_header="Checkout Recent Branch"
-    local git_diff_command="git diff {1} --color=always"
-
-    function commandToGetLastWord() {
-        if type "choose1" > /dev/null; then
-           echo "choose -f ' ' -1"
-        else
-            echo "rev | cut -d ' ' -f 1 | rev"
-        fi
-    }
-    
-    git branch --sort=-committerdate \
-    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
-    | eval "$(commandToGetLastWord)" \
-    | xargs git checkout
-}
-
-alias gcoa='gitCheckOutAll'            # [G]it[C]heck[O]ut[A]ll Branches
-function gitCheckOutAll () {
-    local fzf_header="Checkout Recent Branch"
-    local git_diff_command="git diff {1} --color=always"
-
-    function commandToGetLastWord() {
-        if type "choose1" > /dev/null; then
-           echo "choose -f ' ' -1"
-        else
-            echo "rev | cut -d ' ' -f 1 | rev"
-        fi
-    }
-    
-    git branch --all --sort=-committerdate \
-    | grep -v HEAD \
-    | sed "s|remotes\/||g" \
-    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
-    | eval "$(commandToGetLastWord)" \
-    | sed "s|origin\/||g" \
-    | xargs git checkout
-}
-
-alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 alias manf='man -k . | awk "{print $1}" | fzf --preview "man {1}" --preview-window=right,70% | xargs man'
+alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+
+alias gco='gitCheckOut --local-only'    # [G]it[C]heck[O]ut Local Branches
+alias gcoa='gitCheckOut'                # [G]it[C]heck[O]ut[A]ll Branches
+function gitCheckOut () {
+    local fzf_header="Checkout Recent Branch"
+    local git_diff_command="git diff {1} --color=always"
+    
+    local get_last_word_command="rev | cut -d ' ' -f 1 | rev"
+    if type "choose" > /dev/null; then
+        get_last_word_command="choose -f ' ' -1"
+    fi
+
+    local grep_filter="HEAD"
+    if [[ "$1" == "--local-only" ]]; then
+        grep_filter="remotes"
+    fi
+
+    git branch --all --sort=-committerdate \
+    | grep -v "$grep_filter" \
+    | sed "s|remotes/||g" \
+    | fzf --header "$fzf_header" --preview "$git_diff_command" --pointer=">" \
+    | eval "$get_last_word_command" \
+    | sed "s|origin/||g" \
+    | xargs git checkout
+}
 
 
 # Only For Ubuntu
