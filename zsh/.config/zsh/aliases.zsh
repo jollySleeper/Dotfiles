@@ -26,8 +26,8 @@ alias bt-dd='bluetoothctl disconnect'   # [D]isconnect[D]evice
 
 alias bt-md='macOfDevice'               # [M]acOf[D]evice
 function macOfDevice () {
-    MAC=$(bt-ld | rg -i $*)
-    echo ${MAC:7:17}
+    local mac=$(bt-ld | rg --ignore-case "$*")
+    echo ${mac:7:17}
 }
 
 
