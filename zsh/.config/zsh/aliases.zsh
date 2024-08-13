@@ -26,9 +26,13 @@ alias bt-dd='bluetoothctl disconnect'   # [D]isconnect[D]evice
 
 alias bt-md='macOfDevice'               # [M]acOf[D]evice
 function macOfDevice () {
-    # TODO: Handle No Input & RipGrep
-    local mac=$(bt-ld | rg --ignore-case "$*")
-    echo ${mac:7:17}
+    if [[ -z "$*" ]]; then
+        echo "Device Not Provided as Parameter"
+    else
+        # TODO: RipGrep
+        local mac=$(bt-ld | rg --ignore-case "$*")
+        echo ${mac:7:17}
+    fi
 }
 
 
