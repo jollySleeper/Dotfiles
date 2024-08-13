@@ -29,8 +29,11 @@ function macOfDevice () {
     if [[ -z "$*" ]]; then
         echo "Device Not Provided as Parameter"
     else
-        # TODO: RipGrep
-        local mac=$(bt-ld | rg --ignore-case "$*")
+        local search_command="grep --ignore-case $*"
+        if type "rg" > /dev/null; then
+            search_command="rg --ignore-case "$*""
+        fi
+        local mac=$(bt-ld | eval "$search_command")
         echo ${mac:7:17}
     fi
 }
