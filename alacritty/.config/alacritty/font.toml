@@ -1,0 +1,7 @@
+import = [
+    "/home/legion/Dotfiles/alacritty/.config/alacritty/fonts/dejaVuSans.toml"
+]
+
+[font]
+builtin_box_drawing = true
+size = 16

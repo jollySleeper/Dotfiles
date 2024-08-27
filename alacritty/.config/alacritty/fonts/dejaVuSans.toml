@@ -1,7 +1,3 @@
-[font]
-builtin_box_drawing = true
-size = 16
-
 [font.bold]
 family = "monospace"
 style = "Bold"
