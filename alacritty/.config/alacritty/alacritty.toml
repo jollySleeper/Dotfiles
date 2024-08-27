@@ -1,6 +1,6 @@
 import = [
     "/home/legion/Dotfiles/alacritty/.config/alacritty/colors.toml",
-    "/home/legion/Dotfiles/alacritty/.config/alacritty/fonts.toml"
+    "/home/legion/Dotfiles/alacritty/.config/alacritty/font.toml"
 ]
 
 [env]
