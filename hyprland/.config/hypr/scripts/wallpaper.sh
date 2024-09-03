@@ -7,7 +7,7 @@ send_notification() {
 WALLPAPER="$HOME/.cache/wallpaper/image.png"
 RANDOM_WALLPAPER=$(ls $HOME/Pictures/Wallpapers/*png | shuf -n 1)
 
-# For SwayLock
+# For Hyprlock
 cp -v ${RANDOM_WALLPAPER} ${WALLPAPER}
 
 send_notification "Changing Wallpaper"
