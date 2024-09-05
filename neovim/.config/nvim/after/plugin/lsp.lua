@@ -71,6 +71,11 @@ local custom_conf = {
         on_attach = function(client, bufnr)
             print('Hello ClangD');
         end,
+    },
+    ["jdtls"] = {
+        on_attach = function(client, bufnr)
+            print('Hello jdtls');
+        end,
     }
 };
 
