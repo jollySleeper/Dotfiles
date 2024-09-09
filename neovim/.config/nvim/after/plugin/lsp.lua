@@ -76,6 +76,11 @@ local custom_conf = {
         on_attach = function(client, bufnr)
             print('Hello jdtls');
         end,
+    },
+    ["ruff"] = {
+        on_attach = function(client, bufnr)
+            print('Hello Ruff');
+        end,
     }
 };
 
