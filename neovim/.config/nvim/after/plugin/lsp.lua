@@ -97,6 +97,7 @@ lsp.format_on_save({
     servers = {
         ['lua_ls'] = { 'lua' },
         ['rust_analyzer'] = { 'rust' },
+        ['ruff'] = { 'python' }
     }
 })
 
