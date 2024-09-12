@@ -31,7 +31,8 @@ custom_theme.inactive.c.fg = colors.skyblue
 local undotree = {
     sections = {
         lualine_a = {
-            { 'filetype',
+            {
+                'filetype',
                 colored = false
             }
         },
@@ -48,7 +49,8 @@ end
 local nvimtree = {
     sections = {
         lualine_a = {
-            { get_short_cwd,
+            {
+                get_short_cwd,
                 fmt = function(str)
                     local paths = {}
                     local fullPath = ""
