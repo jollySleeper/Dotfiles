@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive');
 
     -- LSP-Zero
+    -- TODO: Migrate to 4.x
     use({
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
