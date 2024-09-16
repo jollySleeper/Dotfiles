@@ -37,5 +37,5 @@ opt.isfname:append("@-@")
 -- Update Time
 opt.updatetime = 50
 
--- Leader
+-- Leader Key = SpaceBar
 vim.g.mapleader = " ";
