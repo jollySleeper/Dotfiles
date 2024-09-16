@@ -18,7 +18,7 @@ opt.wrap = false
 -- For UndoTree as Backup
 opt.swapfile = false
 opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
 opt.undofile = true
 
 -- Search
