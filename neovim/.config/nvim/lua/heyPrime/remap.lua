@@ -99,14 +99,17 @@ keymap.set("n", "<leader>remap", "<cmd>e ~/.config/nvim/lua/heyPrime/remap.lua<C
 -- Will Add Type of Paranthesis which have missing end.
 -- It's Handled by LSP.
 
+
 -- Commentary
 -- <leader>cl = [C]omment [L]ine : For Commenting a Line
 -- <leader>cb = [C]omment [B]lock : For Commenting a Code Block
 -- NOTE: cb cab be changed to a key combo for supporting Vim Motions
 
+
 -- Fugitive
 -- Viewing Git Status
 keymap.set("n", "<leader>gs", cmd.Git);
+
 
 -- GitSigns
 -- For Jumping to Next Hunk
@@ -119,6 +122,7 @@ keymap.set("n", "<leader>gvh", "<cmd>:Gitsigns preview_hunk<CR>", { desc = "[G]i
 keymap.set("n", "<leader>ghl", "<cmd>:Gitsigns toggle_linehl<CR>", { desc = "[G]it[H]ighlight[L]ine" });
 -- For Highlighting Words
 keymap.set("n", "<leader>ghw", "<cmd>:Gitsigns toggle_word_diff<CR>", { desc = "[G]it[H]ighlight[W]ords" });
+
 
 -- LSP = Language Server Protocol
 -- Using Lsp-Zero.nvim Plugin which has default KeyBindings
@@ -135,10 +139,12 @@ keymap.set("n", "<leader>ghw", "<cmd>:Gitsigns toggle_word_diff<CR>", { desc = "
 -- [d: Move to the previous diagnostic in the current buffer. See :help vim.diagnostic.goto_prev().
 -- ]d: Move to the next diagnostic. See :help vim.diagnostic.goto_next().
 
+
 -- Nvim Tree
 -- Toggling NvimTree/DirectoryStructure
 keymap.set("n", "<leader>dir", "<cmd>:NvimTreeToggle<CR>");
 -- Other Mappings are Realted to Directory Structure
+
 
 -- Telescope
 local builtin = require('telescope.builtin');
@@ -175,11 +181,3 @@ keymap.set("n", "<leader>ut", cmd.UndotreeToggle, { desc = "[U]ndo[T]ree" });
 -- Remap For Cargo
 keymap.set("n", "<leader>rb", "<cmd>!cargo build<CR>", { desc = "[R]ust[B]uild" });
 keymap.set("n", "<leader>rr", "<cmd>!cargo run<CR>", { desc = "[R]ust[R]un" });
-
-
-
-
--- TODOS:
--- Switching Buffers Instanly
--- Replace Packer.Nvim with Lazy.Nvim (https://github.com/folke/lazy.nvim)
--- https://www.youtube.com/watch?v=aqlxqpHs-aQ
