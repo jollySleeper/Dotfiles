@@ -3,7 +3,7 @@ local cmd = vim.cmd;
 
 -- :Explore Mode which Bring Directory Structure
 -- Obsolete as Using Nvim Tree
-keymap.set("n", "<leader>file", cmd.Explore);
+-- keymap.set("n", "<leader>file", cmd.Explore);
 
 -- :Move    For Moving Lines
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
