@@ -2,7 +2,7 @@
 local opt = vim.opt;
 
 -- Numbers
-opt.nu = true
+opt.number = true
 opt.relativenumber = true
 
 -- Tabs & Indents
