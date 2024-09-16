@@ -1,9 +1,6 @@
 local keymap = vim.keymap;
 local cmd = vim.cmd;
 
--- Leader Key TODO: Shift to sets.lua
-vim.g.mapleader = " "; -- Space Key
-
 -- :Explore Mode which Bring Directory Structure
 -- Obsolete as Using Nvim Tree
 keymap.set("n", "<leader>file", cmd.Explore);
