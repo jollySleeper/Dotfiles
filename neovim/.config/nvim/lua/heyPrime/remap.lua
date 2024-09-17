@@ -22,8 +22,8 @@ keymap.set("v", ">", ">gv")
 -- For Resizing Windows with Arrows
 keymap.set("n", "<C-Up>", ":resize -2<CR>")
 keymap.set("n", "<C-Down>", ":resize +2<CR>")
-keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
-keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
+keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
+keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Page Jumping
 keymap.set("n", "<C-d>", "<C-d>zz")
