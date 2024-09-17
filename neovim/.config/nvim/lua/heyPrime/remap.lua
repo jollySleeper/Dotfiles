@@ -50,7 +50,8 @@ keymap.set("n", "<leader>zq", "<cmd>:qa!<CR>");
 
 -- Format Code
 keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat[C]ode" });
-keymap.set("n", "<leader>fcr", "<cmd>:%!rome format --stdin-file-path %<CR>", { desc = "[F]ormat[C]odeWith[R]ome" });
+-- TODO: Check Formatting for Biome
+-- keymap.set("n", "<leader>fcr", "<cmd>:%!rome format --stdin-file-path %<CR>", { desc = "[F]ormat[C]odeWith[R]ome" });
 
 -- For Killing Buffer You are On Currently
 keymap.set("n", "<leader>x", "<cmd>:bd<CR>");
