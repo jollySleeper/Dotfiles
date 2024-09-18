@@ -5,7 +5,7 @@ local cmd = vim.cmd;
 -- Obsolete as Using Nvim Tree
 -- keymap.set("n", "<leader>file", cmd.Explore);
 
--- :Move    For Moving Lines
+-- For Moving Lines, Command = :Move
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
