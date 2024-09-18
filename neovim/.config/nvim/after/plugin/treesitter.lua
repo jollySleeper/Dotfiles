@@ -3,9 +3,9 @@
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     ensure_installed = {
-        "c", "cpp", "rust",
+        "c", "cpp", "rust", "go", "java",
         "javascript", "typescript",
-        "lua", "php", "python", "vim", "help"
+        "lua", "python", "vim", "help", "markdown"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -15,7 +15,7 @@ require 'nvim-treesitter.configs'.setup {
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
 
-    autopairs = { enable = true, },
+    autopairs = { enable = true },
 
     highlight = {
         -- `false` will disable the whole extension
