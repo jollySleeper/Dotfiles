@@ -57,8 +57,8 @@ keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat[C]ode" });
 -- For Killing Buffer You are On Currently
 keymap.set("n", "<leader>x", "<cmd>:bdelete<CR>", { desc = "[x] Buffer Delete" });
 -- For Switching Buffers Quickly
-keymap.set("n", "<leader>pb", "<cmd>:bp<CR>");
-keymap.set("n", "<leader>nb", "<cmd>:bN<CR>");
+keymap.set("n", "<leader>pb", "<cmd>:bprevious<CR>", { desc = "[P]revious[B]uffer" });
+keymap.set("n", "<leader>nb", "<cmd>:bnext<CR>", { desc = "[N]ext[B]uffer" });
 
 -- QuickFix Mappings For Fixing Errors
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
