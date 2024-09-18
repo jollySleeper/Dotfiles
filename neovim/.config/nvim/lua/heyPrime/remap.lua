@@ -55,7 +55,7 @@ keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "[F]ormat[C]ode" });
 -- keymap.set("n", "<leader>fcr", "<cmd>:%!rome format --stdin-file-path %<CR>", { desc = "[F]ormat[C]odeWith[R]ome" });
 
 -- For Killing Buffer You are On Currently
-keymap.set("n", "<leader>x", "<cmd>:bd<CR>");
+keymap.set("n", "<leader>x", "<cmd>:bdelete<CR>", { desc = "[x] Buffer Delete" });
 -- For Switching Buffers Quickly
 keymap.set("n", "<leader>pb", "<cmd>:bp<CR>");
 keymap.set("n", "<leader>nb", "<cmd>:bN<CR>");
