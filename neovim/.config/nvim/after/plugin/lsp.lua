@@ -12,28 +12,8 @@ local custom_conf = {
         end,
         settings = {
             intelephense = {
-                environment = {
-                    -- inlcudePaths = {},
-                    -- documentRoot = {},
-                    phpVersion = "7.2.34"
-                },
                 format = {
                     braces = "k&r"
-                },
-                -- Writing Whole Stubs as configure() function Overrides default values :(
-                -- Need to Add Stub for Flawless Integration of Intelephense in Plugin Folder
-                stubs = {
-                    "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", "ctype", "curl",
-                    "date", "dba", "dom", "enchant", "exif", "FFI", "fileinfo", "filter", "fpm", "ftp",
-                    "gd", "gettext", "gmp", "hash", "iconv", "imap", "intl", "json", "ldap", "libxml",
-                    "mbstring", "meta", "mysqli", "oci8", "odbc", "openssl", "pcntl", "pcre", "PDO",
-                    "pdo_ibm", "pdo_mysql", "pdo_pgsql", "pdo_sqlite", "pgsql", "Phar", "posix",
-                    "pspell", "random", "readline", "Reflection", "session", "shmop", "SimpleXML",
-                    "snmp", "soap", "sockets", "sodium", "SPL", "sqlite3", "standard", "superglobals",
-                    "sysvmsg", "sysvsem", "sysvshm", "tidy", "tokenizer", "xml", "xmlreader",
-                    "xmlrpc", "xmlwriter", "xsl", "Zend OPcache", "zip", "zlib",
-                    -- Custom Stub
-                    "/var/www/html/ps/Sites/frostmag.com/", -- For ArbPlugin
                 }
             }
         }
