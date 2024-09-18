@@ -10,6 +10,7 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- For Moving Between Windows
+-- TODO: Remove this as CTRL + W is Easier
 keymap.set("n", "<leader>ma", "<C-w>h")
 keymap.set("n", "<leader>md", "<C-w>j")
 keymap.set("n", "<leader>ms", "<C-w>k")
